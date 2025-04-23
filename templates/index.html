@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Age Calculator</title>
+</head>
+<body>
+
+<div class="calculator-container">
+    <h1>Age Calculator</h1>
+    <input type="date" id="birthDate" required>
+    <button class="calculate-btn" id="calculateBtn">Calculate</button>
+    <div class="results-container">
+        <div class="result-box">
+            <span id="years">00</span>
+        </div>
+        <div class="result-box">
+            <span id="months">00</span>
+        </div>
+        <div class="result-box">
+            <span id="days">00</span>
+        </div>
+    </div>
+    <div class="lables">
+        <label>Year</label>
+        <label>Months</label>
+        <label>Days</label>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='javascript.js') }}"></script>
+</body>
+</html>
