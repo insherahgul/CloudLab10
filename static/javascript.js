@@ -21,12 +21,14 @@ function calculateAge(birthDate, today) {
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
 
+    // Adjust for negative days (i.e., birthday hasn't occurred yet this month)
     if (days < 0) {
         months--;
         const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0);
         days += previousMonth.getDate();
     }
 
+    // Adjust for negative months (i.e., birthday hasn't occurred yet this year)
     if (months < 0) {
         years--;
         months += 12;
